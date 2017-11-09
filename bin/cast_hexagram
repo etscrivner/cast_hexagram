@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+
+# Add the lib directory to the load path
+LIB_DIRECTORY = File.expand_path('../../lib', __FILE__)
+$LOAD_PATH.unshift(LIB_DIRECTORY)
+
+require 'iching'
+
+if ARGV.length != 1
+  puts "USAGE: cast_hexagram <QUESTION>"
+  exit
+else
+  question = ARGV[0]
+  Iching::CastHexagram.new.run(question)
+end
