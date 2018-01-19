@@ -105,8 +105,8 @@ module Iching
       #   be calculated.
       # @return [Integer] sequence number of the hexagram given
       def calculate(hexagram)
-        lower_trigram = hexagram.lines[0...3]
-        upper_trigram = hexagram.lines[3...6]
+        upper_trigram = hexagram.lines[0...3]
+        lower_trigram = hexagram.lines[3...6]
         SEQUENCE_NUMBER[[lower_trigram, upper_trigram]]
       end
     end
