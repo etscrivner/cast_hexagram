@@ -29,12 +29,14 @@ module Iching
       primary_hexagram = cast_primary_hexagram
 
       puts "PRIMARY HEXAGRAM (\##{primary_hexagram.number}):"
+      puts primary_hexagram.divination_link
       puts primary_hexagram
       puts ""
 
       if primary_hexagram.has_changing_lines?
         relating_hexagram = primary_hexagram.relating_hexagram
         puts "RELATING HEXAGRAM (\##{relating_hexagram.number}):"
+        puts relating_hexagram.divination_link
         puts relating_hexagram
       end
     end

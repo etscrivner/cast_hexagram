@@ -83,6 +83,11 @@ module Iching
       Sequences::KingWen.new.calculate(self.without_changing_lines)
     end
 
+    # @return [String] link to website with more information on the hexagram
+    def divination_link
+      "http://divination.com/iching/lookup/#{number}-2/"
+    end
+
     # @return [String] string representation of the hexagram
     def to_s
       @lines.map { |line| STRING_FOR_LINE[line] }.join("\n")
